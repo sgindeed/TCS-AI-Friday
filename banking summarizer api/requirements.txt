@@ -1,7 +1,0 @@
-fastapi
-uvicorn
-python-dotenv
-langchain
-langchain-openai
-httpx
-flask
