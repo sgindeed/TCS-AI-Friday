@@ -1,0 +1,127 @@
+{
+  "pipeline": "analytics_batch",
+  "metric": "reports_generated",
+  "timestamp": "2026-03-05 14:25",
+  "expected": 200,
+  "actual": 45,
+  "logs": [
+    "INFO Starting analytics batch",
+    "INFO Loading dataset",
+    "WARNING High memory usage",
+    "ERROR Out of memory exception",
+    "INFO Job partially completed"
+  ]
+}
+
+
+
+
+
+
+
+{
+  "pipeline": "event_stream_processor",
+  "metric": "events_processed",
+  "timestamp": "2026-03-05 15:40",
+  "expected": 80000,
+  "actual": 30000,
+  "logs": [
+    "INFO Kafka consumer started",
+    "WARNING Kafka lag detected",
+    "WARNING Consumer falling behind",
+    "ERROR Processing delay detected"
+  ]
+}
+
+
+
+
+
+
+{
+  "pipeline": "inventory_etl",
+  "metric": "records_processed",
+  "timestamp": "2026-03-05 16:10",
+  "expected": 15000,
+  "actual": 14890,
+  "logs": [
+    "INFO Starting ETL job",
+    "INFO Fetching records",
+    "INFO Transforming data",
+    "INFO Loading into warehouse",
+    "INFO Job completed successfully"
+  ]
+}
+
+
+
+
+
+
+
+
+
+{
+  "pipeline": "payments_etl",
+  "metric": "transactions_processed",
+  "timestamp": "2026-03-05 13:10",
+  "expected": 5000,
+  "actual": 0,
+  "logs": [
+    "INFO Starting ETL job",
+    "INFO Connecting to database",
+    "ERROR Database connection refused",
+    "ERROR Unable to fetch transactions",
+    "INFO Job failed"
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "pipeline": "orders_etl",
+  "metric": "orders_processed",
+  "timestamp": "2026-03-05 12:01",
+  "expected": 10000,
+  "actual": 1200,
+  "logs": [
+    "INFO Starting ETL job",
+    "INFO Fetching records from API",
+    "ERROR API timeout",
+    "WARNING records missing",
+    "INFO Retrying API call"
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+Pipeline payments_etl expected 8000 but processed 0. ERROR database connection failed.
+
+
+
+Pipeline inventory_sync expected 5000 but processed 4200. WARNING records skipped due to validation errors.
+
+
+
+
+Pipeline user_analytics expected 15000 but processed 14800. WARNING partial event data received.
